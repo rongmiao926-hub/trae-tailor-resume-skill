@@ -79,11 +79,11 @@ Save the structured result to `_experience_pool_cache.md` with `Write` or `Searc
 
 **IMPORTANT: Always ask the user about style reference before generating the resume.**
 
-Prefer reusing an existing Word resume style when available.
+Prefer reusing an existing Word resume style when available. Supported style reference formats: `.docx` and `.doc`.
 
-- If there are multiple `.docx` resumes, **MUST ask the user** which one should provide the visual style before proceeding.
-- If there is exactly one `.docx` resume, confirm with the user whether to use it as `style_reference`.
-- If there is no user-provided `.docx` but `reference.docx` exists in the working directory, use that.
+- If there are multiple Word resumes (`.docx` or `.doc`), **MUST ask the user** which one should provide the visual style before proceeding.
+- If there is exactly one Word resume (`.docx` or `.doc`), confirm with the user whether to use it as `style_reference`.
+- If there is no user-provided Word resume but `reference.docx` or `reference.doc` exists in the working directory, use that.
 - If only PDF resumes exist, explain that content can be extracted but original layout cannot be preserved, then ask whether to continue with default formatting.
 
 When asking questions, keep them short and concrete. Ask only what is needed to keep moving.
@@ -137,6 +137,16 @@ Add confirmed user details back into the experience pool before drafting. If the
 
 Write the resume in Chinese and keep it to one page after document rendering.
 
+**CRITICAL: Personal Information Preservation**
+
+You MUST preserve all personal information from the source resumes in the tailored resume:
+- **Name (姓名)**: Always include the exact name from source
+- **Contact Info (联系方式)**: Phone number, email, and any other contact details
+- **Education (教育经历)**: Complete education history with schools, degrees, and dates
+- **Any other personal identifiers**: Location, LinkedIn, portfolio links, etc.
+
+Do NOT use placeholders like `[姓名]` or `[手机号]`. If personal information is found in source resumes, use it directly. Only use placeholders if the source resumes genuinely lack this information.
+
 Use a structure close to:
 
 ```text
@@ -165,6 +175,25 @@ Apply these writing rules:
 - Keep only evidence that helps this application.
 - Reuse contact, education, and factual history from source materials without embellishment.
 - Surface the strongest, most role-relevant evidence first.
+
+**STAR Writing Guidelines**
+
+When rewriting experience bullets, follow the STAR structure:
+
+- **Situation**: What was the context or challenge?
+- **Task**: What was the goal or responsibility?
+- **Action**: What specific actions did you take?
+- **Result**: What was the measurable outcome?
+
+Example transformation:
+- Before: "负责数据分析工作"
+- After: "面对亿级社交媒体数据治理挑战，主导数据结构设计与质量验收体系搭建，实现数据资产统一存储与可追溯，研究成果发表于SSCI一区期刊"
+
+Key principles:
+- Lead with the most impactful element
+- Quantify results whenever possible
+- Use strong action verbs
+- Connect actions to business outcomes
 
 In batch mode, generate a separate resume draft for each JD.
 
