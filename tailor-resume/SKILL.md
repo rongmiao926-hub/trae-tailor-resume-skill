@@ -77,10 +77,12 @@ Save the structured result to `_experience_pool_cache.md` with `Write` or `Searc
 
 ### 3. Choose A Style Reference
 
+**IMPORTANT: Always ask the user about style reference before generating the resume.**
+
 Prefer reusing an existing Word resume style when available.
 
-- If there is exactly one `.docx` resume, use it as `style_reference`.
-- If there are multiple `.docx` resumes, ask the user which one should provide the visual style.
+- If there are multiple `.docx` resumes, **MUST ask the user** which one should provide the visual style before proceeding.
+- If there is exactly one `.docx` resume, confirm with the user whether to use it as `style_reference`.
 - If there is no user-provided `.docx` but `reference.docx` exists in the working directory, use that.
 - If only PDF resumes exist, explain that content can be extracted but original layout cannot be preserved, then ask whether to continue with default formatting.
 
